@@ -5,7 +5,7 @@ body {
     background-color: #999;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -31,13 +31,13 @@ main {
 
 .column {
   width: 70%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin-bottom: 1em;
   padding: 1%;
   flex-shrink: 1;
 }
 
-#column-1 {
+#column-1, #column-3 {
   background-color: #757de8;
 }
 
@@ -46,10 +46,6 @@ main {
     background-color: #3f51b5;
 }
 
-
-#column-3 {
-    background-color: #757de8;
-}
 
 footer {
     background-color: #002984;
@@ -69,7 +65,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (min-width: 575px) and (max-width: 799px) {
   main {
     flex-direction: row;
     flex-wrap: wrap;
@@ -87,5 +83,9 @@ footer {
 
   #column-3 {
     width: 100%;
+  }
+
+  main {
+    align-items: inherit;
   }
 }
